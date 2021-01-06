@@ -1,0 +1,256 @@
+ /*css reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /* css varible */
+:root{
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/* navigation bar */
+ #navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#navbar::before{
+    content: "";
+    background-color:black ;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;  
+}
+#logo{
+  margin: 10px 34px;
+}
+#logo img{
+  height: 59px;
+  margin: 3px 6px;
+}
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px ; 
+    color: white;
+}
+#navbar ul li a:hover{
+    background-color: white;
+    color: black;
+}
+/* home section */
+#home{
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;   
+    text-align: center;   
+    height: 550px;
+    position: relative;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('../img/bg1.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    z-index: -1;
+}
+#home p{
+    color: rgb(248, 248, 248);  
+    margin-top: 12px;
+    font-size: 1.3rem;
+}
+#home h1{
+    color: white;
+}
+
+/* service section */
+#services{
+    display: flex;
+    margin: 34px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#services img {
+  width:160px;
+}
+#services .box{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid brown;
+    margin: 3px 6px;
+    text-align: center;
+    width: 25%;
+    padding: 20px;
+    height: 400px;
+    border-radius:28px;  
+    background:#f2f2f2;
+}
+
+/* client section */
+.client-section{
+    height: 344px;
+    position: relative;
+    padding: 20px;
+  
+}
+.client-section::before{
+    content: "";
+    position: absolute;
+    background:url('../img/bg.jpg');
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+#clients{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#clients img{
+    height: 105px;
+    width: 115px;
+}
+.client-item{
+    padding: 34px;
+}
+
+/* utility classes */
+.h-primary{
+    font-size: 3rem;
+}
+.h-secondary{
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 10px;
+}
+.btn{
+    font-size: 1rem;
+    border-radius: 7px;
+    background-color: rgb(51, 50, 50);
+    border:2px solid black;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: white;
+    width: 130px;
+    margin:10px  auto;  
+    font-weight: bold;
+}
+.center{
+    text-align: center;
+}
+.btn:hover{
+    background-color: transparent; 
+}
+
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background:url('../img/contact.jpg')no-repeat center center;
+}
+#contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 34px;
+}
+#contact-box input,textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+}
+ 
+@media(max-width:1000px)
+{
+    #navbar{
+        flex-direction: column;
+    }
+    #navbar ul li{
+        font-size: 1.26rem;
+    }
+    #navbar ul li a{
+        display: block;
+        padding: 3px 17px;
+        border-radius: 20px ; 
+        color: white;
+    }
+    /* home */
+    #home{
+      height: 490px;
+    }
+    #home  p{
+        font-size:1rem;
+    }
+    #home  h1{
+        margin-top: 100px;
+    }
+    /* service */
+    #services .box{
+        padding: 20px 30px;
+        height: 290px;
+
+    }
+    #services{
+        flex-direction:column;
+    }
+    #services .box{
+         width: 90%;
+         margin-bottom: 15px;
+    }
+    
+    /* client */
+    .client-section{
+        height: 280px; 
+    }
+    #clients{
+        flex-wrap: wrap;
+    }
+    #clients img{
+        width: 80px;
+        height: 80px;
+    }
+    .client-item{
+        padding: 10px;
+    }
+
+    /* contact */
+    #contact-box form{
+        width: 60%;
+    }
+    /* utility classes */
+    .h-primary{
+        font-size: 2rem;
+        padding-top: 10px;
+    }
+}
